@@ -11,9 +11,7 @@
     "target": "es2015",
     "jsx": "react",
     "lib": ["es2016", "dom"],
-    "baseUrl": "./src/",
-    "paths": {},
-    "plugins": []
+    "baseUrl": "./src/"
   },
   "exclude": ["node_modules"]
 }

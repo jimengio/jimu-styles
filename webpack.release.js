@@ -1,6 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+var TerserPlugin = require("");
 
 module.exports = {
   mode: "production",
@@ -28,6 +29,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"]
+  },
+  optimization: {
+    minimizer: [new TerserPlugin()]
   },
   plugins: [
     new webpack.DefinePlugin({

@@ -1,8 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import ColorDemo from "./color-demo";
+
+class AppContainer extends React.Component<any, any> {
+  render() {
+    return (
+      <>
+        <ColorDemo />
+      </>
+    );
+  }
+}
+
 function renderApp() {
-  ReactDOM.render(<div>test</div>, document.querySelector("#app_container"));
+  ReactDOM.render(<AppContainer />, document.querySelector("#app_container"));
 }
 
 window.onload = renderApp;
